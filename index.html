@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Viewport meta tag: required for responsive design on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Unique title for this page (important for SEO) -->
+  <title>Student | Web Development Portfolio</title>
+
+  <!-- Meta description: shown by search engines in results -->
+  <meta name="description" content="Welcome to Student's web development portfolio. A college student learning HTML, CSS, and web technologies. View my projects and get in touch." />
+
+  <!-- Meta keywords: secondary SEO signal -->
+  <meta name="keywords" content="web development student, HTML CSS portfolio, beginner web developer, Tamil Nadu" />
+
+  <!-- Helps search engines and social media understand the page author -->
+  <meta name="author" content="Student" />
+
+  <!-- External stylesheet (single CSS file for the whole site) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--
+    ACCESSIBILITY: Skip-to-content link
+    Hidden visually, but the first focusable element on the page.
+    Keyboard users can press Tab and then Enter to jump past the
+    navigation directly to the main content.
+  -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header>
+    <div class="header-inner">
+      <!-- Logo / site name: links back to home -->
+      <a href="index.html" class="site-title" aria-label="Student – Home">Student</a>
+
+      <!--
+        SEMANTIC: <nav> with aria-label tells screen readers
+        this is the main site navigation (not just any list).
+      -->
+      <nav aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
+  <!--
+    SEMANTIC: <main> wraps the primary content of the page.
+    The id="main-content" is the target for the skip-to-content link.
+  -->
+  <main id="main-content">
+
+    <!-- ── Hero / Introduction Section ─────────────────────── -->
+    <section aria-labelledby="hero-heading">
+      <div class="hero">
+        <!--
+          aria-hidden="true": This circle with initials is decorative.
+          Screen readers don't need to announce it because the text
+          below already introduces the person.
+        -->
+        <div class="avatar" aria-hidden="true">S</div>
+
+        <div class="hero-text">
+          <h1 id="hero-heading">Hi, I'm Student</h1>
+          <p class="hero-role">Web Development Student</p>
+          <p class="hero-intro">
+            I'm a college student based in Tamil Nadu, India, currently learning
+            web development. I enjoy building things for the web and exploring
+            how HTML, CSS, and JavaScript all work together. This portfolio is
+            where I document my learning journey and share the projects I've
+            been working on.
+          </p>
+          <div class="btn-group">
+            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── What I'm Learning Section ────────────────────────── -->
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">What I'm Currently Learning</h2>
+      <p>
+        I'm focused on front-end fundamentals right now — getting comfortable
+        with semantic HTML, CSS layouts, and accessibility best practices before
+        moving into JavaScript frameworks.
+      </p>
+
+      <!--
+        SEMANTIC: Using article inside section for each self-contained
+        skill card, since each could theoretically stand on its own.
+      -->
+      <div class="card-grid">
+        <article class="card">
+          <h3>HTML5</h3>
+          <p>Learning semantic markup, forms, tables, and how to write
+             accessible HTML that works for everyone.</p>
+        </article>
+
+        <article class="card">
+          <h3>CSS3</h3>
+          <p>Practicing Flexbox, Grid, responsive design, and writing
+             organised stylesheets without a framework.</p>
+        </article>
+
+        <article class="card">
+          <h3>Accessibility</h3>
+          <p>Understanding WCAG guidelines, ARIA roles, and how to make
+             websites usable by people with disabilities.</p>
+        </article>
+
+        <article class="card">
+          <h3>Version Control</h3>
+          <p>Getting comfortable with Git and GitHub for tracking changes
+             and organising my project files.</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ── Quick Links Section ──────────────────────────────── -->
+    <section aria-labelledby="links-heading">
+      <h2 id="links-heading">Explore the Site</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3><a href="about.html">About Me</a></h3>
+          <p>A bit more about my background, education, and what I'm
+             hoping to do after I graduate.</p>
+        </article>
+
+        <article class="card">
+          <h3><a href="projects.html">Projects</a></h3>
+          <p>Three small projects I built while practicing HTML, CSS,
+             and basic programming concepts.</p>
+        </article>
+
+        <article class="card">
+          <h3><a href="contact.html">Contact</a></h3>
+          <p>Feel free to reach out if you'd like to connect or have
+             any feedback about my work.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <!--
+    SEMANTIC: <footer> provides supplementary information
+    such as copyright and contact links.
+  -->
+  <footer>
+    <p>
+      &copy; 2024 Student &nbsp;|&nbsp;
+      Built with HTML5 &amp; CSS3 &nbsp;|&nbsp;
+      <a href="mailto:student123@example.com">student123@example.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>

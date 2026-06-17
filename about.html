@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Unique page title for SEO -->
+  <title>About Me | Student Portfolio</title>
+
+  <meta name="description" content="Learn more about Student, a web development student from Tamil Nadu, India. Discover my education, skills, and interests in front-end web development." />
+  <meta name="keywords" content="about student developer, web development learner, Tamil Nadu student, front-end beginner" />
+  <meta name="author" content="Student" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ACCESSIBILITY: Skip to main content for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="site-title" aria-label="Student – Home">Student</a>
+
+      <nav aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- Page heading — only one h1 per page -->
+    <h1>About Me</h1>
+
+    <!-- ── Introduction ─────────────────────────────────────── -->
+    <section aria-labelledby="intro-heading">
+      <h2 id="intro-heading">A Little Background</h2>
+      <p>
+        I'm a second-year Computer Science student studying in Tamil Nadu, India.
+        I first got interested in web development when I had to build a simple
+        webpage for a college assignment and realised I actually enjoyed the process
+        more than I expected. Since then I've been spending my evenings learning
+        HTML, CSS, and slowly getting into JavaScript.
+      </p>
+      <p>
+        Right now my main goal is to understand the fundamentals properly before
+        jumping into frameworks. I've been reading about accessibility a lot lately
+        and it's changed the way I think about writing HTML — it's not just about
+        making things look right, it's about making sure everyone can use them.
+      </p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ── Two-column layout: Skills + Personal Info ─────────── -->
+    <div class="about-grid">
+
+      <!-- Left column: Skills and Education -->
+      <div>
+        <!-- ── Technical Skills ──────────────────────────────── -->
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <p>Things I've been learning and practising:</p>
+          <!--
+            ACCESSIBILITY: This is a plain unordered list of skills.
+            Using a real <ul> instead of divs makes it easier for
+            screen readers to announce it as a list.
+          -->
+          <ul class="skills-list" aria-label="List of technical skills">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Semantic Markup</li>
+            <li>Responsive Design</li>
+            <li>Flexbox &amp; Grid</li>
+            <li>Web Accessibility</li>
+            <li>Basic Python</li>
+            <li>Git &amp; GitHub</li>
+            <li>VS Code</li>
+            <li>Command Line</li>
+          </ul>
+        </section>
+
+        <!-- ── Education ─────────────────────────────────────── -->
+        <section aria-labelledby="edu-heading">
+          <h2 id="edu-heading">Education</h2>
+
+          <div class="edu-item">
+            <p class="degree">B.Sc. Computer Science</p>
+            <p class="school">Government Arts &amp; Science College, Tamil Nadu</p>
+            <p class="year">2022 – 2025 (ongoing)</p>
+          </div>
+
+          <div class="edu-item">
+            <p class="degree">Higher Secondary (Computer Science group)</p>
+            <p class="school">State Board School, Tamil Nadu</p>
+            <p class="year">Completed 2022</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right column: Personal Info + Interests -->
+      <div>
+        <!-- ── Personal Details ──────────────────────────────── -->
+        <section aria-labelledby="details-heading">
+          <h2 id="details-heading">Personal Details</h2>
+          <!--
+            ACCESSIBILITY: Using <dl> (description list) would also work
+            here, but a <ul> with clear label/value pairs is perfectly
+            readable and works well visually.
+          -->
+          <ul class="contact-info-list" aria-label="Personal contact information">
+            <li>
+              <span class="info-label">Name:</span>
+              <span>Student</span>
+            </li>
+            <li>
+              <span class="info-label">Email:</span>
+              <!-- Using mailto: so keyboard/screen-reader users can activate it -->
+              <a href="mailto:student123@example.com">student123@example.com</a>
+            </li>
+            <li>
+              <span class="info-label">Phone:</span>
+              <!-- tel: link works on mobile devices -->
+              <a href="tel:+919876543210">+91 9876543210</a>
+            </li>
+            <li>
+              <span class="info-label">Location:</span>
+              <span>Tamil Nadu, India</span>
+            </li>
+            <li>
+              <span class="info-label">Status:</span>
+              <span>Open to internships</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ── Interests ─────────────────────────────────────── -->
+        <section aria-labelledby="interests-heading">
+          <h2 id="interests-heading">What I'm Interested In</h2>
+          <p>
+            Besides web development, I spend time reading about how the internet
+            works — DNS, HTTP, how browsers render pages, that sort of thing.
+            I find it useful to understand what's happening under the hood.
+          </p>
+          <p>
+            Outside of tech, I like cricket and reading Tamil literature. I also
+            help out occasionally at a community library near my college.
+          </p>
+        </section>
+
+        <!-- ── Goals ─────────────────────────────────────────── -->
+        <section aria-labelledby="goals-heading">
+          <h2 id="goals-heading">What I'm Working Towards</h2>
+          <p>
+            My short-term goal is to find a web development internship where I can
+            work on real projects and get feedback from experienced developers.
+            After I graduate, I'd like to work as a front-end developer and
+            eventually learn back-end development too.
+          </p>
+          <div class="btn-group mt-sm">
+            <a href="projects.html" class="btn btn-primary">See My Projects</a>
+            <a href="contact.html" class="btn btn-outline">Contact Me</a>
+          </div>
+        </section>
+      </div>
+
+    </div><!-- end .about-grid -->
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      &copy; 2024 Student &nbsp;|&nbsp;
+      Built with HTML5 &amp; CSS3 &nbsp;|&nbsp;
+      <a href="mailto:student123@example.com">student123@example.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
